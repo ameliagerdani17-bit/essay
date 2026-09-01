@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EssayMate</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">EssayMate</div>
+    <p>Your schoolwork writing assistant</p>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <h1>Write better essays.</h1>
+      <p>Plan, write, and improve your school assignments.</p>
+    </section>
+
+    <section class="card">
+      <h2>📝 Essay Planner</h2>
+
+      <label>Essay topic</label>
+      <input id="topic" type="text"
+        placeholder="e.g. Should school uniforms be mandatory?">
+
+      <label>Essay type</label>
+      <select id="essayType">
+        <option>Argumentative</option>
+        <option>Informative</option>
+        <option>Compare and Contrast</option>
+        <option>Persuasive</option>
+        <option>Narrative</option>
+      </select>
+
+      <button onclick="generateOutline()">Create Outline</button>
+
+      <div id="outline" class="result"></div>
+    </section>
+
+
+    <section class="card">
+      <h2>✍️ Writing Feedback</h2>
+
+      <textarea id="essay"
+        placeholder="Paste your essay here..."></textarea>
+
+      <div class="stats">
+        <span>Words: <strong id="wordCount">0</strong></span>
+        <span>Characters: <strong id="charCount">0</strong></span>
+      </div>
+
+      <button onclick="checkEssay()">Check My Writing</button>
+
+      <div id="feedback" class="result"></div>
+    </section>
+
+
+    <section class="card">
+      <h2>📚 Citation Helper</h2>
+
+      <select id="citationStyle">
+        <option>MLA</option>
+        <option>APA</option>
+      </select>
+
+      <input id="author" placeholder="Author name">
+      <input id="title" placeholder="Book/article title">
+      <input id="year" placeholder="Publication year">
+      <input id="publisher" placeholder="Publisher">
+
+      <button onclick="createCitation()">Create Citation</button>
+
+      <div id="citation" class="result"></div>
+    </section>
+
+
+    <section class="card">
+      <h2>💾 Save Your Draft</h2>
+
+      <button onclick="saveDraft()">Save Draft</button>
+      <button class="secondary" onclick="loadDraft()">Load Draft</button>
+
+      <p id="saveMessage"></p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>EssayMate • Built for students</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
